@@ -1,0 +1,30 @@
+module.exports = {
+  singleQuote: true, // Use single quotes instead of double quotes
+  trailingComma: 'es5', // Add trailing commas wherever possible (except in function arguments)
+  semi: true, // Add semicolons at the end of statements
+  printWidth: 80, // Specify the line length where Prettier will try to wrap code
+  tabWidth: 2, // Specify the number of spaces per indentation level
+  htmlWhitespaceSensitivity: 'strict', // Enforce consistent whitespace sensitivity for HTML
+  arrowParens: 'avoid', // Omit parentheses around arrow function parameters whenever possible
+  endOfLine: 'auto', // Maintain the line endings of the current operating system
+  overrides: [
+        {
+      files: '*.html',
+      options: {
+        parser: 'html', // Use the HTML parser for .html files
+            },
+        },
+        {
+      files: '*.js',
+      options: {
+        parser: 'babel', // Use the Babel parser for .js files
+            },
+        },
+        {
+      files: '*.css',
+      options: {
+        parser: 'css', // Use the CSS parser for .css files
+            },
+        },
+    ],
+};
